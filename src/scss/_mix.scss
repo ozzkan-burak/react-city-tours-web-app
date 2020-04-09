@@ -1,0 +1,23 @@
+// fonts
+@mixin fontProcess($size, $weight, $family) {
+    font: {
+        family:'#{$family}' , sans-serif;
+        size: calculateRem($size);
+        weight: $weight;
+    }
+}
+
+// general modifiers
+
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 'base') {
+    @each $key, $value in $map {
+      &#{if($key != $base, #{$prefix}#{$key}, '')} {
+        @if type-of($value) == 'map' {
+          @include modifiers($value, $attribute, $separator);
+        }
+        @else {
+          #{$attribute}: $value;
+        }
+      }
+    }
+  }

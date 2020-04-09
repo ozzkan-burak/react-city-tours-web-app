@@ -1,0 +1,21 @@
+@import './scss/font';
+@import "./scss/var";
+@import "./scss/mix";
+@import "./scss/function";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: $mainBlack;
+  @include fontProcess(14px, 400, Roboto);
+}
+
+
+
