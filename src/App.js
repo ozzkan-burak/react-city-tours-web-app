@@ -2,14 +2,15 @@ import React from 'react';
 import './App.scss';
 
 // custom components
-import NavBar from "./components/NavBar";
+import NavBar from './components/NavBar/NavBar';
+import TourList from './components/TourList';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <h1>Hello From App</h1>
-    </div>
+    <main className="App">
+      <NavBar Alt="city tours logo" />
+      <TourList />
+    </main>
   );
 }
 

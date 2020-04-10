@@ -1,0 +1,8 @@
+@import '../../index.scss';
+
+.tour-list{
+    width: calculateRem(960px);
+    margin: 0 auto;
+    padding: calculateRem(20px) 0;
+    @include flex(space-around, flex-start);
+}

@@ -1,0 +1,59 @@
+@import '../../index.scss';
+
+.tour{
+    background: $mainGrey;
+    border-radius: calculateRem(14px);
+    margin: 0 calculateRem(8px);
+    max-width: calculateRem(224px);
+    .img-container {
+        position: relative;
+        img{
+            display: block;
+            width: 100%;
+            max-height: calculateRem(139px);
+            border-top: {
+                left-radius:calculateRem(14px) ;
+                right-radius:calculateRem(14px) ;
+            }
+        }
+        .close-btn{
+            position: absolute;
+            right: calculateRem(10px);
+            top: calculateRem(10px);
+            color: $mainGreen;
+            font-size: calculateRem(25px);
+            cursor: pointer;
+            @include trans();
+            opacity: 0;
+        }
+        &:hover {
+            .close-btn{
+                opacity: 1;
+            }
+        }
+    }
+}
+.tour-info {
+    padding: calculateRem(16px) calculateRem(8px);
+    h3{
+        text-transform: uppercase;
+        color: $mainGreen;
+    }
+    h4 {
+        @include flex(space-between);
+       text-transform: capitalize;
+       color: $mainBlack;
+       margin: calculateRem(4px) 0 calculateRem(10px) 0;
+       span{
+        color: $mainGreen;
+        margin: calculateRem(8px);
+        font-size: calculateRem(20px);
+        cursor: pointer;
+    }
+    }
+    h5 {
+        text-transform: capitalize;
+        color: $mainBlack;
+        
+     }
+}

@@ -21,3 +21,18 @@
       }
     }
   }
+
+// flex
+@mixin flex($justify: center, $align: center ) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// transition
+@mixin trans($trans: all ease .4s) {
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  -o-transition: $trans;
+  transition: $trans;
+}

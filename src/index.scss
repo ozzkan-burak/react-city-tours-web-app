@@ -5,6 +5,7 @@
 
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +16,14 @@ body {
   background: white;
   color: $mainBlack;
   @include fontProcess(14px, 400, Roboto);
+}
+#root{
+  @include flex();
+
+}
+.App{
+  max-width: calculateRem(966px);
+  width: 100%;
 }
 
 

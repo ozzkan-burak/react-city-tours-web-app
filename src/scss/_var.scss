@@ -1,8 +1,22 @@
 // variables
 $mainBlack: #333;
 $mainBlue: #105589;
+$mainBlueLight: #D2E4F2;
 $mainGreen: #D7FFAB;
 $mainGrey: #AAACB0;
 
+$colors: (
+  red: #333,
+  blue: (
+    base: #105589,
+    light: #D2E4F2
+  ),
+  grey: (
+    base: #AAACB0
+  ),
+  green: (
+    base: #D7FFAB
+  )
+);
 
-// font family
+$trans: all ease .4s;

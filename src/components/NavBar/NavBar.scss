@@ -1,0 +1,32 @@
+@import "../../index.scss";
+
+.navbar {
+    @include flex(space-around);
+    border-bottom: calculateRem(3px) solid $mainGrey;
+    width: 100%;
+    img {
+        max-width: 100px;
+    }
+    ul {
+        width: 70%;
+        list-style-type: none;
+        @include flex();
+    }
+    a {
+        text-decoration: none;
+        color: $mainBlue;
+        padding: calculateRem(10px) calculateRem(20px);
+        margin-left: calculateRem(15px);
+        border: 1px solid transparent;
+        
+        &:hover, &.active {
+            border: {
+                top: 1px solid $mainBlueLight;
+                left: 1px solid $mainBlueLight;
+                right: 1px solid $mainBlueLight;
+                bottom: 1px solid $mainBlue;;
+            }
+
+        }
+    }
+}
